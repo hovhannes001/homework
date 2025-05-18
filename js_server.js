@@ -12,7 +12,7 @@ const server = http.createServer((req,res) => {
             res.statusCode =200;
             res.end("Post recieved");
         });
-    
+        res.end("Post request recieved");
     }
     else if(req.method === "GET" && req.url === "/"){
         let buffer = "";
@@ -22,7 +22,7 @@ const server = http.createServer((req,res) => {
     }
     else{
         res.statusCode = 404;
-        res.end("Error 404: File not found");
+        res.end("Error 404: File not found2");
     }
 });
 
