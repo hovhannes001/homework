@@ -384,7 +384,82 @@
 //     // implicit mixin of `Something` to `Another`
 //         Something.cool.call(this);
 //     }
+// // };
+// // Another.cool();
+// // console.log(Another.greeting); // "Hello World"
+// // console.log(Another.count); // 1 (not shared state with `Something`)
+
+// let error = "Global Error";
+
+// try {
+//     throw new Error("Local Error");
+// } catch (error) {
+//     error.message = "Modified Error";
+// }
+
+// console.log(error);
+
+
+// console.log("4" == 4);
+// console.log(Boolean(4));
+// console.log(4 == true);
+// console.log(2 * "F" == NaN);
+
+// console.log("\t\n\v ");
+// class Test {
+//     static #priv = 12;
+//     #size = 12;
+//     static foo() {
+// //       Test.#priv = 14;
+// //       return Test.#priv;
+// //     }
+// //   }
+// //   let t = new Test();
+// //   console.log(Test.foo());
+
+// //   console.log("\t\n\v ");
+  
+
+// const person = {
+//     name: "John",
+//     surname: "Smith",
+//     get fullName() {
+//         return `${this.name} ${this.surname}`;
+//     },
+//     set fullName(fullName) {
+//         [this.name, this.surname] = fullName.split(' ');
+//     }
 // };
-// Another.cool();
-// console.log(Another.greeting); // "Hello World"
-// console.log(Another.count); // 1 (not shared state with `Something`)
+// const user = Object.create(person, {
+//     name: {
+//         value: 'Mike',
+//     }
+// });
+// const admin = Object.create(user, {
+//     isAdmin: {
+//         value: true,
+//         writable: true,
+//         enumerable: true,
+//         configurable: true
+//     }
+// });
+// for (const key in admin) {
+//     console.log(key,admin[key]);
+
+// }
+// console.log("\t\n\v");
+// console.log(person);
+// console.log(user);
+// console.log(admin   );
+// console.log("\t\n\v ");
+
+
+console.log(1)
+setTimeout(() => {
+    console.log(2)
+    Promise.resolve().then(() => console.log(3))
+}, 0);
+
+Promise.resolve().then(() => console.log(4));
+console.log(5);
+setTimeout(() => console.log(6),0);
